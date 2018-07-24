@@ -16,4 +16,20 @@ The goals/steps of this project are the folloing:
   * Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 
 
-## 
+## Camera Calibration
+In the real world, there is always a distortion when cameras use curved lenses to form an image. So it is necessary to 
+use a method to reduce or remove the effect of distortion. Checkerboard patterns are useful for this tasks. I applied 
+OpenCV functions **_findChessboardCorners_** and **_drawChessboardCorners_** to automatically find the draw corners in an image of
+a chessboard pattern, like following figure:
+![png](Figures/chessboard.png)
+
+Then I applied function **_calibrateCamera_** to measure distortion coefficients. After that **_undistort_** is used for
+correcting distortion of image. The result like the below figure:
+![png](Figures/chessboard_undist.png)
+
+And I applied the camera calibration method on test images collected from real world,
+![png](Figures/test_images_undist.png)
+
+## Color Transforms and Gradient Thresholded
+
+
