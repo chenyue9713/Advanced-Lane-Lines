@@ -31,5 +31,22 @@ And I applied the camera calibration method on test images collected from real w
 ![png](Figures/test_images_undist.png)
 
 ## Color Transforms and Gradient Thresholded
+In order to filter out the road lanes in each frame of video, Sobel operator is a good way to achieve it. In my project I applied Gradient threshold combination for these images, like following figures:
+![png](Figures/test_images_Gradient_Thresholded.png)
+Also, I set a threshold for s parameter on hls color space and region of interest to filter the surrounding noise.
+The points for region I am interested show on following table:
+
+
+| Points                         |     Value                       |
+|:---------------------:|:---------------------------------------------:|
+| Lower Left                 | (Width x 0.1, Height)                                     |
+| Upper Left              | (580,440) |
+| Upper right         | (750,420)   |
+| Lower right     | (Width x 0.95, Height)  |
+
+The output figures is following:
+![png](Figures/roi_image.png)
+
+## Perspective Transform
 
 
