@@ -81,7 +81,10 @@ And then after first frame, we don't need to use sliding windows to track the la
 
 ## Measure Curvature of lanes
 In order to measure curvatures of left lane and right lane, I implement the equation learnt from course
+
 ![png](Figures/curv_equ.png)
+
+
 And also for our camera images, let's say 720 pixel in y-dimension indicate around 30 meters, and 700 pixels in x-dimension indicate around 3.7 meters. 
 
          ym_per_pix = 30/720
