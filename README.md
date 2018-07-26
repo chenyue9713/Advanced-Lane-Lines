@@ -67,9 +67,11 @@ Then **_warpPerspective_** is applied with M to warp image, the output warped im
 The idea finding lane is that we use two hightest peaks from histogram as a starting point for determining where the lane lines are, and the use sliding windows moving upward in the image. I calculate the mean of pixels' value inside of left and 
 right windows and re-center windows. Then I can collect the lane lines pixels and feed those into **_polyfit_** function.
 The second order polynomial fit value can be got. like below figure:
+
 ![png](Figures/find_lane_rec.png)
 
 And then after first frame, we don't need to use sliding windows to track the lane lines because it is inefficient and instead we can search in a margin around previous line position, like following figure:
+
 ![png](Figures/find_lane_around.png)
 
 ## Measure Curvature of lanes
@@ -94,10 +96,12 @@ For above figure, the curvature and offset of center is shown in following table
 
 ## Drawing measurement of lines
 I applied all of technique and computer vision algorithm on test image shown on following figure:
-![png](Figures/measure_images.png)
+
+![png](Figures/measure_image.png)
 
 ## Video Pipeline
 The implementation Pipeline for project video can be found in the link:
+
 [Project Video](https://youtu.be/mFVmcjrYePw)
 
 ## Discussion
