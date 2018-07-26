@@ -28,11 +28,14 @@ correcting distortion of image. The result like the below figure:
 ![png](Figures/chessboard_undist.png)
 
 And I applied the camera calibration method on test images collected from real world,
+
 ![png](Figures/test_images_undist.png)
 
 ## Color Transforms and Gradient Thresholded
 In order to filter out the road lanes in each frame of video, Sobel operator is a good way to achieve it. In my project I applied Gradient threshold combination for these images, like following figures:
+
 ![png](Figures/test_images_Gradient_Thresholded.png)
+
 Also, I set a threshold for s parameter on hls color space and region of interest to filter the surrounding noise.
 The points for region I am interested show on following table:
 
@@ -45,6 +48,7 @@ The points for region I am interested show on following table:
 | Lower right     | (Width x 0.95, Height)  |
 
 The output figures is following:
+
 ![png](Figures/roi_image.png)
 
 ## Perspective Transform
@@ -61,6 +65,7 @@ I applied **_getPerspectiveTransform_** to compute perspective Transform, M and 
 | Lower right     | ((Width / 2 + 55), Height / 2 + 100)  |   ((Width * 3 / 4), 0)     |
 
 Then **_warpPerspective_** is applied with M to warp image, the output warped images like below:
+
 ![png](Figures/warped_images.png)
 
 ## Find lane boundary 
